@@ -1,12 +1,15 @@
-(function() {
+sap.ui.define([
+    "sap/ui/core/mvc/Controller",
+], function(Controller) {
     "use strict";
-
-    sap.ui.controller("com.katan.view.Root", {
-        onInit: function() {
-            this.app = this.getView().byId("App");
+    return Controller.extend("com.katan.controller.Root", {
+        onInit:function(){
+            /*
+            var imageMap = this.byId("addressImage");
+            imageMap.setModel(this.getView().getModel("address"));
+            */
         }
-
 
     });
 
-}());
+});
