@@ -11,9 +11,6 @@
 	<Shell showLogout="false">
 		<App id="App">
 			<pages title="Katans Demo Site">
-				<content>
-					<MessageStrip type="Information" showIcon="true" text="Here's a Form Layout inside an Icon Tab Bar …"/>
-				</content>
 			</pages>
 		</App>
 	</Shell>
