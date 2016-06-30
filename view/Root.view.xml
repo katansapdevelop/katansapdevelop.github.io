@@ -10,9 +10,9 @@
 		<pages>
 			<Page title="Katan's Site">
 				<content>
-					<IconTabBar id="idTopLevelIconTabBar" selectedKey="db" class="sapUiResponsiveContentPadding">
+					<IconTabBar id="idTopLevelIconTabBar" selectedKey="default" class="sapUiResponsiveContentPadding">
 						<items>
-							<IconTabFilter id="start" text="Tab Title">
+							<IconTabFilter id="start" text="Tab Title" key="default">
 									<Carousel>
 										<pages>
 											<Image src="https://upload.wikimedia.org/wikipedia/commons/9/9f/GEO_Globe.jpg" height="		600px"/>
