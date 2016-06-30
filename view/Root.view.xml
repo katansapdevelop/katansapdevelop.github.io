@@ -2,7 +2,7 @@
 <core:View
 	controllerName="com.katan.controller.Root"
 	displayBlock="true"
-	resourceBundleName="com.katan.i18n.messageBundle"
+	resourceBundleName="com.katan.i18n.i18"
 	resourceBundleAlias="i18n"
 	xmlns:core="sap.ui.core"
 	xmlns:mvc="sap.ui.core.mvc"
