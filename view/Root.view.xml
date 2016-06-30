@@ -12,7 +12,7 @@
 				<content>
 					<IconTabBar id="idTopLevelIconTabBar" selectedKey="default" class="sapUiResponsiveContentPadding">
 						<items>
-							<IconTabFilter id="start" text="{i18n>reumeFilter}" key="default">
+							<IconTabFilter id="start" text="{i18n>resumeFilter}" key="default">
 									<Carousel>
 										<pages>
 											<Image src="https://upload.wikimedia.org/wikipedia/commons/9/9f/GEO_Globe.jpg" height="600px"/>
