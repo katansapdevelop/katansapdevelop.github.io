@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<core:View
+	controllerName="com.katan.controller.Root"
+	displayBlock="true"
+	resourceBundleName="com.katan.i18n.messageBundle"
+	resourceBundleAlias="i18n"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+
+	<Shell showLogout="false">
+		<App id="App">
+			<pages title="Katans Demo Site">
+			</pages>
+		</App>
+	</Shell>
+
+</core:View>
