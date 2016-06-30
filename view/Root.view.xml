@@ -1,18 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<core:View
-	controllerName="com.katan.controller.Root"
-	displayBlock="true"
-	resourceBundleName="com.katan.i18n.i18"
-	resourceBundleAlias="i18n"
-	xmlns:core="sap.ui.core"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.m">
+<mvc:View displayBlock="true" 
+		  xmlns:mvc="sap.ui.core.mvc" 
+		  xmlns="sap.m" 
+		  controllerName="com.katan.controller.App"
+		  xmlns:core="sap.ui.core" 
+		  xmlns:l="sap.ui.layout" 
+		  xmlns:f="sap.ui.layout.form">
 
-	<Shell showLogout="false">
-		<App id="App">
-			<pages title="Katans Demo Site">
-			</pages>
-		</App>
-	</Shell>
-
-</core:View>
+	<App>
+		<pages>
+			<Page title="openSAP - Developing with SAPUI5">
+			</Page>
+		</pages>
+	</App>	  
+</mvc:View>
