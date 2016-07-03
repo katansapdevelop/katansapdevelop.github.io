@@ -1,7 +1,17 @@
 {
 	"Name": "Katan Patel",
 	"email": "katan.sap.development@gmail.com",
-	"Jobs":[
-	]
-	
+	"Twitter": "@katansapdevelop",
+	"LinkedIn":"https://au.linkedin.com/in/katanpatel",
+	"Jobs":[{
+
+	}],
+	"Education":[{
+
+	}],
+	"Qualifications":[
+		{
+			"Name":"Developing Web Apps with SAPUI5",
+			"CertificationURL":"https://open.sap.com/verify/xovif-rydif-porih-kamib-hukot"
+	}]
 }

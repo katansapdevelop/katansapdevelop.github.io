@@ -5,21 +5,45 @@
 		  xmlns:core="sap.ui.core" 
 		  xmlns:l="sap.ui.layout" 
 		  xmlns:f="sap.ui.layout.form">
-
 	<App>
 		<pages>
-			<Page title="Katan's Site">
+			<Page title="{i18n>siteTitle}">
 				<content>
-					<IconTabBar id="idTopLevelIconTabBar" selectedKey="default" class="sapUiResponsiveContentPadding">
+					<IconTabBar id="idTopLevelIconTabBar" selectedKey="aboutme" class="sapUiResponsiveContentPadding">
 						<items>
-							<IconTabFilter id="start" text="{i18n>resumeFilter}" key="default">
-									<Carousel>
-										<pages>
-											<Image src="https://upload.wikimedia.org/wikipedia/commons/9/9f/GEO_Globe.jpg" height="600px"/>
-											<Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Wikipedia_Hello_World_Graphic.svg/2000px-Wikipedia_Hello_World_Graphic.svg.png"
-												height="600px"/>
-										</pages>
-									</Carousel>
+							<IconTabFilter id="aboutMeTab" text="{i18n>aboutMeTab}" key="aboutme">
+							</IconTabFilter>
+							<IconTabFilter id="skillsTab" text="{i18n>skillsTab}" key="skills">
+								<Carousel>
+									<pages>
+										<Panel id="programmingLanguagePanel" width="auto" class="sapUiResponsiveMargin">
+											<f:SimpleForm maxContainerColumns="2" title="{i18n>programmingLanguagePanel}">
+												<f:content>
+													<Label text="{i18n>programmingLanguageRatingJava}"/> 
+													<RatingIndicator id="javaRating" maxValue="10" value="6"/>
+													<Label text="{i18n>programmingLanguageRatingABAP}"/> 
+													<RatingIndicator id="abapRating" maxValue="10" value="10"/>
+												</f:content>
+											</f:SimpleForm>
+										</Panel>
+										<Panel id="sapAppsPanel" width="auto" class="sapUiResponsiveMargin">
+											<Title text="{i18n>sapAppsPanel}"/>
+										</Panel>
+									</pages>
+								</Carousel>
+							</IconTabFilter>
+							<IconTabFilter id="experienceTab" text="{i18n>experienceTab}" key="experience">
+							</IconTabFilter>
+							<IconTabFilter id="qualificationsTab" text="{i18n>qualificationsTab}" key="qualifications">
+							</IconTabFilter>
+							<IconTabFilter id="contactTab" text="{i18n>contactTab}" key="contact">
+								<IconTabBar id="contactTabBar" selectedKey="email">
+									<items>
+										<IconTabFilter id="callTab" icon="sap-icon://call" key="call"/>
+										<IconTabFilter id="emailTab" icon="sap-icon://email" key="email"/>
+										<IconTabFilter id="downloadTab" icon="sap-icon://download" key="download"/>
+									</items>
+								</IconTabBar>
 							</IconTabFilter>
 						</items>
 					</IconTabBar>
