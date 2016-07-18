@@ -14,26 +14,59 @@
 						<items>
 							<IconTabFilter id="aboutMeTab" text="{i18n>aboutMeTab}" key="aboutme">
 								<Text text="{/AboutMe}"/>
-								<controls:Chart id="myChart" chartType="polarArea" width="600" height="300" data="setData"/>
 							</IconTabFilter>
 							<IconTabFilter id="skillsTab" text="{i18n>skillsTab}" key="skills">
 								<Carousel>
 									<pages>
 										<Panel id="programmingLanguagePanel" width="auto" class="sapUiResponsiveMargin">
-											<List items="{/Skills/ProgrammingLanguages}" headerText="{i18n>programmingLanguagePanel}">
-												<CustomListItem>
-													<Label text="{Language}" class="sapUISmallMarginTop"/> 
-													<RatingIndicator maxValue="{MaxRating}" value="{Rating}" enabled="false"/>
-												</CustomListItem>
-											</List>
+											<Table id="programmingLanguageTable" items="{/Skills/ProgrammingLanguages}">
+												<headerToolbar>
+													<Toolbar>
+														<Title text="{i18n>programmingLanguagePanel}"/>
+													</Toolbar>
+												</headerToolbar>
+												<columns>
+													<Column>
+														<Text text="{i18n>programmingLanguageColumnLanguage}"/>
+													</Column>
+													<Column>
+														<Text text="{i18n>programmingLanguageColumnRating}"/>
+													</Column>
+												</columns>
+												<items>
+													<ColumnListItem>
+														<cells>
+															<Label text="{Language}" class="sapUISmallMarginTop"/> 
+															<RatingIndicator maxValue="{MaxRating}" value="{Rating}" enabled="false"/>
+														</cells>
+													</ColumnListItem>
+												</items>
+											</Table>
 										</Panel>
 										<Panel id="sapAppsPanel" width="auto" class="sapUiResponsiveMargin">
-											<List items="{/Skills/SAPApplications}" headerText="{i18n>sapAppsPanel}">
-												<CustomListItem>
-													<Label text="{Application}" class="sapUISmallMarginTop"/> 
-													<RatingIndicator maxValue="{MaxRating}" value="{Rating}" enabled="false"/>
-												</CustomListItem>
-											</List>
+											<Table id="sapApplicationsTable" items="{/Skills/SAPApplications}">
+												<headerToolbar>
+													<Toolbar>
+														<Title text="{i18n>sapAppsPanel}"/>
+													</Toolbar>
+												</headerToolbar>
+												<columns>
+													<Column>
+														<Text text="{i18n>sapAppColumnApplication}"/>
+													</Column>
+													<Column>
+														<Text text="{i18n>sapAppColumnRating}"/>
+													</Column>
+												</columns>
+												<items>
+													<ColumnListItem>
+														<cells>
+															<Label text="{Application}" class="sapUISmallMarginTop"/> 
+															<RatingIndicator maxValue="{MaxRating}" value="{Rating}" enabled="false"/>
+														</cells>
+													</ColumnListItem>
+												</items>
+											</Table>
 										</Panel>
 									</pages>
 								</Carousel>
@@ -41,6 +74,40 @@
 							<IconTabFilter id="experienceTab" text="{i18n>experienceTab}" key="experience">
 							</IconTabFilter>
 							<IconTabFilter id="qualificationsTab" text="{i18n>qualificationsTab}" key="qualifications">
+								<Carousel>
+									<pages>
+										<Panel id="certificationsPanel" width="auto" class="sapUiResponsiveMargin">
+											<Table id="certificationsTable" items="{/Certifications}">
+												<headerToolbar>
+													<Toolbar>
+														<Title text="{i18n>certificationsPanel}"/>
+													</Toolbar>
+												</headerToolbar>
+												<columns>
+													<Column>
+														<Text text="{i18n>certificationColumnName}"/>
+													</Column>
+													<Column>
+														<Text text="{i18n>certificationColumnAgency}"/>
+													</Column>
+													<Column>
+														<Text text="{i18n>certificationColumnScore}"/>
+													</Column>
+												</columns>
+												<items>
+													<ColumnListItem>
+														<cells>
+															<Label text="{Name}" class="sapUISmallMarginTop"/> 
+															<Label text="{CertifyingAgency}" class="sapUISmallMarginTop"/> 
+															<controls:Chart id="certificationChart" chartType="polarArea" width="500" height="200" 
+																data="getChartData"/>
+														</cells>
+													</ColumnListItem>
+												</items>
+											</Table>
+										</Panel>
+									</pages>
+								</Carousel>
 							</IconTabFilter>
 							<IconTabFilter id="contactTab" text="{i18n>contactTab}" key="contact">
 								<IconTabBar id="contactTabBar" selectedKey="email">

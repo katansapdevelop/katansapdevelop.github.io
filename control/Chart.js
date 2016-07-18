@@ -23,18 +23,19 @@ sap.ui.define([
 					}
 				},
 				getChart:function(){
-					// Returns the chart object
+					// Returns the chart.js object instance 
 					return this._chart;
 				},
 				_setChart:function(myChart){
-					// Sets the chart object to the control
+					// Sets the chart.js object instance for the chart control
 					this._chart = myChart;
 				},
 				_getCanvasId:function(){
-					// Returns the Id of the canvas for the chart
+					// Returns the Id of the canvas for the chart control
 					return this.getId() + "_chart_canvas";
 				},
 				_getCanvas:function(){
+					// Get the canvas for the chart control
 					var chartCanvas = document.getElementById(this._getCanvasId());
 					return chartCanvas.getContext("2d");
 				},

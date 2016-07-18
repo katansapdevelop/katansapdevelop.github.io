@@ -8,6 +8,12 @@ sap.ui.define([
             var imageMap = this.byId("addressImage");
             imageMap.setModel(this.getView().getModel("address"));
             */
+
+            // Get the chart control and init the data for it based on the model
+            
+        },
+        getChartData:function(){
+            
         }
 
     });
