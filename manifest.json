@@ -56,6 +56,10 @@
 				"settings": {
 					"bundleName": "com.katan.i18n.i18n"
 				}
+			},
+			"": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/Resume.json"
 			}
 		}
 	}

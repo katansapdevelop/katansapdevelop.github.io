@@ -4,7 +4,8 @@
 		  controllerName="com.katan.controller.Root"
 		  xmlns:core="sap.ui.core" 
 		  xmlns:l="sap.ui.layout" 
-		  xmlns:f="sap.ui.layout.form">
+		  xmlns:f="sap.ui.layout.form"
+		  xmlns:controls="com.katan.control">
 	<App>
 		<pages>
 			<Page title="{i18n>siteTitle}">
@@ -12,22 +13,27 @@
 					<IconTabBar id="idTopLevelIconTabBar" selectedKey="aboutme" class="sapUiResponsiveContentPadding">
 						<items>
 							<IconTabFilter id="aboutMeTab" text="{i18n>aboutMeTab}" key="aboutme">
+								<Text text="{/AboutMe}"/>
+								<controls:Chart id="myChart" chartType="polarArea" width="600" height="300" data="setData"/>
 							</IconTabFilter>
 							<IconTabFilter id="skillsTab" text="{i18n>skillsTab}" key="skills">
 								<Carousel>
 									<pages>
 										<Panel id="programmingLanguagePanel" width="auto" class="sapUiResponsiveMargin">
-											<f:SimpleForm maxContainerColumns="2" title="{i18n>programmingLanguagePanel}">
-												<f:content>
-													<Label text="{i18n>programmingLanguageRatingJava}"/> 
-													<RatingIndicator id="javaRating" maxValue="10" value="6"/>
-													<Label text="{i18n>programmingLanguageRatingABAP}"/> 
-													<RatingIndicator id="abapRating" maxValue="10" value="10"/>
-												</f:content>
-											</f:SimpleForm>
+											<List items="{/Skills/ProgrammingLanguages}" headerText="{i18n>programmingLanguagePanel}">
+												<CustomListItem>
+													<Label text="{Language}" class="sapUISmallMarginTop"/> 
+													<RatingIndicator maxValue="{MaxRating}" value="{Rating}" enabled="false"/>
+												</CustomListItem>
+											</List>
 										</Panel>
 										<Panel id="sapAppsPanel" width="auto" class="sapUiResponsiveMargin">
-											<Title text="{i18n>sapAppsPanel}"/>
+											<List items="{/Skills/SAPApplications}" headerText="{i18n>sapAppsPanel}">
+												<CustomListItem>
+													<Label text="{Application}" class="sapUISmallMarginTop"/> 
+													<RatingIndicator maxValue="{MaxRating}" value="{Rating}" enabled="false"/>
+												</CustomListItem>
+											</List>
 										</Panel>
 									</pages>
 								</Carousel>

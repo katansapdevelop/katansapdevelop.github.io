@@ -13,7 +13,6 @@ sap.ui.define([
 			UIComponent.prototype.init.apply(this, arguments);
 
 			// additional initialization can be done here
-			
 
 		}
 
