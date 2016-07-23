@@ -12,57 +12,29 @@ sap.ui.define([
 				metadata:{
 					properties:{
 						chartType:{type : "string"},
-						width:{type : "int", defaultValue : "100"},
-						height:{type : "int", defaultValue : "200"},
-						data:{},
-						options:{}
+						width:{type : "sap.ui.core.CSSSize", defaultValue : "100%"},
+						height:{type : "sap.ui.core.CSSSize"},
+						data:{type : "object"},
+						options:{type : "object", defaultValue : 
+							{
+								responsive: true,
+    							maintainAspectRatio: true
+							}
+						}
 					},
 					aggregations:{
 					},
-					events:{
+					events : {
+						initChart : {
+						}
 					}
 				},
-				getChart:function(){
-					// Returns the chart.js object instance 
+				_getChart:function(){
+					// Returns the chart.js object instance for this control
 					return this._chart;
 				},
-				_setChart:function(myChart){
-					// Sets the chart.js object instance for the chart control
-					this._chart = myChart;
-				},
-				_getCanvasId:function(){
-					// Returns the Id of the canvas for the chart control
-					return this.getId() + "_chart_canvas";
-				},
-				_getCanvas:function(){
-					// Get the canvas for the chart control
-					var chartCanvas = document.getElementById(this._getCanvasId());
-					return chartCanvas.getContext("2d");
-				},
 				init:function(){
-				},
-				renderer:function(oRM, oControl) {
-					// The chart scales to the size of the outer div when responsive
-					oRM.write("<div");
-					oRM.writeControlData(oControl);
-					oRM.writeClasses();
-
-					// Add the style to the div (including height settings as Chart.js mods the canvas height when set to responsive)
-					oRM.addStyle("width", oControl.getWidth() + "px");
-					oRM.addStyle("height", oControl.getHeight() + "px");
-					oRM.writeStyles();
-
-					// Close the div tag
-					oRM.write(">");
-
-					// Add a canvas to the DOM
-					oRM.write("<canvas");
-					oRM.writeAttribute("id", oControl._getCanvasId());
-						
-					oRM.write("></canvas>");
-					oRM.write("</div>");
-				},
-				onAfterRendering:function(){
+					/*
 					var myData = 
 					{
     					datasets: [
@@ -74,20 +46,86 @@ sap.ui.define([
     					],
     					labels: ["Red","Green","Yellow","Grey","Blue"]
 					};
-
-					var myChart = this.getChart();
+					this.setData(myData);
+					*/
+				},
+				onAfterRendering:function(){
+					var myChart = this._getChart();
 					// Now create a new one
 					// Can retrieve data via json method...!!!!
 					myChart = new Chart( this._getCanvas(), { 
 						"type": this.getChartType(),
-						"data": myData,
-						"options": {
-							responsive: true,
-    						maintainAspectRatio: true
-						}
+						"data": this.getData(),
+						"options": this.getOptions()
 					});
 
 					this._setChart(myChart);	
+				},
+				renderer:function(oRM, oControl) {
+					// The chart scales to the size of the outer div when responsive
+					oRM.write("<div");
+					oRM.writeControlData(oControl);
+					oRM.writeClasses();
+
+					// Add the style to the div (including height settings as Chart.js mods the canvas height when set to responsive)
+					oRM.addStyle("width", oControl.getWidth());
+					oRM.addStyle("height", oControl.getHeight());
+					oRM.writeStyles();
+
+					// Close the div tag
+					oRM.write(">");
+
+					// Add a canvas to the DOM
+					oRM.write("<canvas");
+					oRM.writeAttribute("id", oControl._getCanvasId());
+						
+					oRM.write("></canvas>");
+					oRM.write("</div>");
+
+					// Fire chart initialisation
+					oControl.fireEvent("initChart");
+				},
+				setData:function(iData){
+					// Overridden set data method so can trigger an update of the chart
+					this.setProperty("data", iData, true);
+
+					try{
+						var myChart = this._getChart();
+						myChart.data = iData;	
+						myChart.update();
+					}
+					catch(e){
+					}
+					
+				},
+				setOptions:function(iOptions){
+					// Set Default Options
+					iOptions["responsive"] = true;
+					iOptions["maintainAspectRatio"] = true;
+
+					// Overridden set options method so can trigger an update of the chart
+					this.setProperty("options", iOptions, true);
+
+					try{
+						var myChart = this._getChart();
+						myChart.options = iOptions;	
+						myChart.update();
+					}
+					catch(e){
+					}
+				},
+				_setChart:function(myChart){
+					// Sets the chart.js object instance for the chart control
+					this._chart = myChart;
+				},
+				_getCanvasId:function(){
+					// Returns the Id of the canvas for the chart control
+					return this.getId() + "-chart_canvas";
+				},
+				_getCanvas:function(){
+					// Get the canvas for the chart control
+					var chartCanvas = document.getElementById(this._getCanvasId());
+					return chartCanvas.getContext("2d");
 				}
 			});	
 	}
