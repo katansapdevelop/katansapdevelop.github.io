@@ -90,7 +90,7 @@
 													<Column>
 														<Text text="{i18n>certificationColumnAgency}"/>
 													</Column>
-													<Column>
+													<Column class="sapUiHideOnPhone">
 														<Text text="{i18n>certificationColumnScore}"/>
 													</Column>
 												</columns>
