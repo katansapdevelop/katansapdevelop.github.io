@@ -1,6 +1,6 @@
 jQuery.sap.registerModulePath('chart.js', 'lib/Chart.js/2.1.6/'); 
-//jQuery.sap.require({modName: "chart.js.Chart", type: "min"});
-jQuery.sap.require({modName: "chart.js.Chart"});
+jQuery.sap.require({modName: "chart.js.Chart", type: "min"});
+//jQuery.sap.require({modName: "chart.js.Chart"});
 
 sap.ui.define([
 		'sap/ui/core/Control'
@@ -25,8 +25,7 @@ sap.ui.define([
 					aggregations:{
 					},
 					events : {
-						initChart : {
-						}
+						initChart : {}
 					}
 				},
 				_getChart:function(){
@@ -34,20 +33,7 @@ sap.ui.define([
 					return this._chart;
 				},
 				init:function(){
-					/*
-					var myData = 
-					{
-    					datasets: [
-    						{
-								data: [11,16,7,3,14],
-        						backgroundColor: ["#FF6384","#4BC0C0","#FFCE56","#E7E9ED","#36A2EB"], 
-        						label: 'My dataset' // for legend
-    						}
-    					],
-    					labels: ["Red","Green","Yellow","Grey","Blue"]
-					};
-					this.setData(myData);
-					*/
+					
 				},
 				onAfterRendering:function(){
 					var myChart = this._getChart();
@@ -99,11 +85,12 @@ sap.ui.define([
 					
 				},
 				setOptions:function(iOptions){
+				// Overridden set options method so can trigger an update of the chart
+
 					// Set Default Options
 					iOptions["responsive"] = true;
 					iOptions["maintainAspectRatio"] = true;
 
-					// Overridden set options method so can trigger an update of the chart
 					this.setProperty("options", iOptions, true);
 
 					try{

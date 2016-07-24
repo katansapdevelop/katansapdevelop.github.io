@@ -14,7 +14,6 @@
 						<items>
 							<IconTabFilter id="aboutMeTab" text="{i18n>aboutMeTab}" key="aboutme">
 								<Text text="{/AboutMe}"/>
-								<!-- <controls:Chart id="testChart" chartType="polarArea" width="500px" height="250px" initChart="setChartData"/> -->
 							</IconTabFilter>
 							<IconTabFilter id="skillsTab" text="{i18n>skillsTab}" key="skills">
 								<Carousel>
@@ -98,10 +97,11 @@
 												<items>
 													<ColumnListItem>
 														<cells>
-															<Label text="{Name}" class="sapUISmallMarginTop"/> 
+															<DisplayListItem value="{Name}" type="Active" class="sapUISmallMarginTop" press="onPressCertificationLabel"/>
 															<Label text="{CertifyingAgency}" class="sapUISmallMarginTop"/> 
+															<!-- Hide the control and output a label when on a mobile device -->
 															<controls:Chart id="certificationChart" chartType="pie" width="500px" height="250px" 
-																initChart="setCertificateChartData"/>
+																initChart="onInitCertificateChartData" class="sapUiHideOnPhone"/>
 														</cells>
 													</ColumnListItem>
 												</items>

@@ -1,36 +1,40 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
-], function(Controller) {
+    "com/katan/controller/Base.controller",
+], function(BaseController) {
     "use strict";
-    return Controller.extend("com.katan.controller.Root", {
+    return BaseController.extend("com.katan.controller.Root", {
         onInit:function(){
-            /*
-            var imageMap = this.byId("addressImage");
-            imageMap.setModel(this.getView().getModel("address"));
-            */
-
-            // Get the chart control and init the data for it based on the model
-            
         },
-        setCertificateChartData:function(oEvent){
-            var chartControl = oEvent.getSource()
-            var bindingContext = chartControl.getBindingContext();
-            var boundData = bindingContext.getModel().getProperty(bindingContext.getPath());
+        onInitCertificateChartData:function(oEvent){
+            var chartControl = oEvent.getSource();
+            
+            var boundData = this._getValue(chartControl);
+
+            var oBundle = this.getResourceBundle();
 
             var chartData = {
-                labels: ["Points Scored", "Missed Points"],
+                labels: [oBundle.getText("certificationPointsScored"), oBundle.getText("certificationPointsMissed")],
                 datasets:[
                     {
-                        data:[boundData["Score"], boundData["Max Score"] - boundData["Score"]],
+                        data:[boundData["Score"], boundData["MaxScore"] - boundData["Score"]],
                         backgroundColor: ["#4BC0C0", "#FF6384"]
                     }
                 ]
             }
 
+            // Set the chart data
             chartControl.setData(chartData);
-            
-
-
+        },
+        onPressCertificationLabel:function(oEvent) {
+            // Pops up the URL from the model for the certificate
+            var boundData = this._getValue(oEvent.getSource());
+            sap.m.URLHelper.redirect(boundData["CertificationURL"], true);
+        },
+        _getValue:function(iControl) {
+            // Reads the model data from the bound to the control
+            var bindingContext = iControl.getBindingContext();
+            var boundData = bindingContext.getModel().getProperty(bindingContext.getPath());            
+            return boundData;
         }
 
     });

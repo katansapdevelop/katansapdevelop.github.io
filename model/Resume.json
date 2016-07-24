@@ -24,14 +24,14 @@
 			"CertifyingAgency":"OpenSAP",
 			"CertificationURL":"https://open.sap.com/verify/xovif-rydif-porih-kamib-hukot",
 			"Score":240,
-			"Max Score":240
+			"MaxScore":240
 		},
 		{
 			"Name":"Introduction to Software Development on SAP HANA",
 			"CertifyingAgency":"OpenSAP",
 			"CertificationURL":"https://open.sap.com/verify/xokid-fyhop-dysal-dinyh-dipat",
 			"Score":269,
-			"Max Score":300
+			"MaxScore":300
 		}
 	],
 	"Skills":{
