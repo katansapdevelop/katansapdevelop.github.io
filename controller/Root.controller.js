@@ -17,7 +17,7 @@ sap.ui.define([
                 datasets:[
                     {
                         data:[boundData["Score"], boundData["MaxScore"] - boundData["Score"]],
-                        backgroundColor: ["#4BC0C0", "#FF6384"]
+                        backgroundColor: ["#427cac", "#b4cbe2"]
                     }
                 ]
             }

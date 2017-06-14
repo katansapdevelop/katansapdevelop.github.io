@@ -1,0 +1,156 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap">
+	<uxap:ObjectPageLayout id="WebDevelopmentPageLayout">
+		<!-- <uxap:headerTitle>
+			<uxap:ObjectPageHeader objectTitle="HTTP"/>
+		</uxap:headerTitle> -->
+		<uxap:sections>
+			<uxap:ObjectPageSection title="{i18n>httpSection}">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection title="{i18n>whyHttpSubSection}">
+						<uxap:blocks>
+							<Text text="{i18n>whyHTTPText}"/>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+					<uxap:ObjectPageSubSection title="{i18n>onlineLearningResources}">
+						<uxap:blocks>
+							<List id="httpLearningList" items="{development>/resources/http}">
+								<items>
+									<CustomListItem>
+										<HBox>
+										<!-- <core:Icon src="{development>icon}" class="sapUiSmallMarginEnd"/> -->
+										<VBox>
+											<Link text="{development>title}" href="{development>uri}" target="_blank" />
+											<!-- info="{development>readingStatus}" -->
+											<Text text="{development>description}"/>
+										</VBox>
+									</HBox>
+									</CustomListItem>
+								</items>
+							</List>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+			<uxap:ObjectPageSection title="{i18n>xmlSection}">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection title="{i18n>whyXmlSubSection}">
+						<uxap:blocks>
+							<Text text="{i18n>whyXmlText}"/>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+					<uxap:ObjectPageSubSection title="{i18n>onlineLearningResources}">
+						<uxap:blocks>
+							<List id="xmlLearningList" items="{development>/resources/xml}">
+								<items>
+									<CustomListItem>
+										<HBox>
+										<!-- <core:Icon src="{development>icon}" class="sapUiSmallMarginEnd"/> -->
+										<VBox>
+											<Link text="{development>title}" href="{development>uri}" target="_blank" />
+											<!-- info="{development>readingStatus}" -->
+											<Text text="{development>description}"/>
+										</VBox>
+									</HBox>
+									</CustomListItem>
+								</items>
+							</List>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+			<uxap:ObjectPageSection title="{i18n>jsSection}">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection title="{i18n>whyjsSubSection}">
+						<uxap:blocks>
+							<Text text="{i18n>whyjsText}"/>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+					<uxap:ObjectPageSubSection title="{i18n>onlineLearningResources}">
+						<uxap:blocks>
+							<List id="jsLearningList" items="{development>/resources/javascript}">
+								<items>
+									<CustomListItem>
+										<HBox>
+										<!-- <core:Icon src="{development>icon}" class="sapUiSmallMarginEnd"/> -->
+										<VBox>
+											<Link text="{development>title}" href="{development>uri}" target="_blank" />
+											<!-- info="{development>readingStatus}" -->
+											<Text text="{development>description}"/>
+										</VBox>
+									</HBox>
+									</CustomListItem>
+								</items>
+							</List>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+					<uxap:ObjectPageSubSection title="Tooling">
+						<uxap:blocks>
+							<Text text="Coming Soon..."/>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+			<uxap:ObjectPageSection title="{i18n>restSection}">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection title="{i18n>whyRestSubSection}">
+						<uxap:blocks>
+							<Text text="{i18n>whyRestText}"/>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+					<uxap:ObjectPageSubSection title="Learning Resources">
+						<uxap:blocks>
+							<List id="restLearningList" items="{development>/resources/rest}">
+								<items>
+									<CustomListItem>
+										<HBox>
+										<!-- <core:Icon src="{development>icon}" class="sapUiSmallMarginEnd"/> -->
+										<VBox>
+											<Link text="{development>title}" href="{development>uri}" target="_blank" />
+											<!-- info="{development>readingStatus}" -->
+											<Text text="{development>description}"/>
+										</VBox>
+									</HBox>
+									</CustomListItem>
+								</items>
+							</List>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+			<uxap:ObjectPageSection title="{i18n>odataSection}">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection title="{i18n>whyOdataSubSection}">
+						<uxap:blocks>
+							<Text text="{i18n>whyOdataText}"/>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+					<uxap:ObjectPageSubSection title="Learning Resources">
+						<uxap:blocks>
+							<Text text="Coming Soon.."/>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+			<uxap:ObjectPageSection title="{i18n>openUI5Section}">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection title="{i18n>whyOpenUI5SubSection}">
+						<uxap:blocks>
+							<Text text="{i18n>whyOpenUI5Text}"/>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+					<uxap:ObjectPageSubSection title="Learning Resources">
+						<uxap:blocks>
+							<Text text="Coming Soon.."/>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+		</uxap:sections>
+	</uxap:ObjectPageLayout>
+</core:FragmentDefinition>

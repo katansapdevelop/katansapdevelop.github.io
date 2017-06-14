@@ -60,6 +60,10 @@
 			"": {
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "model/Resume.json"
+			},
+			"development":{
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/Development.json"
 			}
 		}
 	}

@@ -1,0 +1,144 @@
+{
+	"resources": {
+		"http": [{ 
+	 				"uri": "https://developer.mozilla.org/en-US/docs/Web/HTTP",
+	 				"title": "Mozilla guide to HTTP",
+	 				"description":"Home page with references to all things HTTP",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://thumb-up"
+	 			},
+	 			{
+	 				"uri": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview",
+	 				"title": "An overview of HTTP",
+	 				"description":"High level overview covering the core concepts of HTTP",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+	 			},
+	 			{
+	 				"uri": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers",
+	 				"title": "HTTP Headers",
+	 				"description":"Explanation of HTTP Headers. You will need to understand what the key ones mean and how they can be used at both the client and the server.  If you ever go on to build a web based API you may choose to incorporate custom headers",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+	 			},
+	 			{
+	 				"uri": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods",
+	 				"title": "HTTP Methods",
+	 				"description":"Explanation of HTTP Methods. You will need to understand what the key ones mean.  As you progress to learning about REST and building Restful APIs this information is absolutely required",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+	 			},
+	 			{
+	 				"uri": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status",
+	 				"title": "HTTP Status",
+	 				"description":"Explanation of HTTP Status. Status codes are used to convey the outcome of a request.  Apps can react differently to handle different response codes especially so in error handling scenarios",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+	 			},
+	 			{
+	 				"uri": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS",
+	 				"title": "Access-Control and CORS",
+	 				"description":"Explanation of Access-Control and CORS. First thing most likely to trip you up in your web development journey",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+	 			},
+	 			{
+	 				"uri": "https://developers.google.com/web/tools/chrome-devtools/network-performance/reference",
+	 				"title": "Analysing a network trace for a web application in Google Chrome",
+	 				"description":"Now you know all about HTTP, you should learn about the client side tooling to assist with network analysis.  \nOnce you've completed all of the above reading, go to your favourite website, turn on the chrome developer tools and analyse the network trace.  Look at the request details including headers, response and action details",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+	 			}],
+		"xml":	[{	
+					"uri": "https://developer.mozilla.org/en-US/docs/XML_Introduction",
+	 				"title": "XML Introduction",
+	 				"description":"A simple intro to XML",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				},
+				{	
+					"uri": "https://www.w3schools.com/xml/xml_namespaces.asp",
+	 				"title": "XML Namespaces",
+	 				"description":"Namespaces are an important feature of XML allowing us to clearly delineate which elements belong to which definition",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				}],
+		"javascript":	[{	
+					"uri": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+	 				"title": "Mozilla guide to Javascript",
+	 				"description":"Everything Javascript...",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				},
+				{	
+					"uri": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps",
+	 				"title": "First Steps",
+	 				"description":"Gets you up to speed with fundamental basics of Javascript development",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				},
+				{	
+					"uri": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks",
+	 				"title": "Building Blocks",
+	 				"description":"Introduces you to conditions, loops, functions and events",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				},
+				{	
+					"uri": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Variable_scope",
+	 				"title": "Variable Scope",
+	 				"description":"Really important topic and all part of the basics",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				},
+				{	
+					"uri": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#Closures",
+	 				"title": "Closures",
+	 				"description":"More fun to mess with your mind and extends on variable scope",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				},
+				{	
+					"uri": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Class-based_vs._prototype-based_languages",
+	 				"title": "Class vs Prototype Inheritance",
+	 				"description":"Prototype inheritance in Javascript is a bit weird and this article explains and compares to class based inheritance  in Java",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				},
+				{	
+					"uri": "https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_objects/Function/bind",
+	 				"title": "Binding with Object.bind",
+	 				"description":"This is one of the most important things to understand and learn due to the asynchronous nature of JavaScript",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				},
+				{	
+					"uri": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+	 				"title": "Promises",
+	 				"description":"Another cool feature often used as an alternative to Call Back functions and Events",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				}],
+		"rest": [{	
+					"uri": "https://en.wikipedia.org/wiki/Representational_state_transfer",
+	 				"title": "Intro to REST",
+	 				"description":"Not usually an advocate of Wikipedia, as a reliable information source, however this is the simplest explanation I can find",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				},
+				{	
+					"uri": "https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf",
+	 				"title": "Apigee Web API Design Book",
+	 				"description":"A free eBook describe various practices in the design of restful APIs.  More focussed on service development but handy to understand different implementation styles from a service consumption perspective",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				}
+			]
+	},
+	"tooling":{
+		"jsbin":{ 
+		"title":"jsbin",
+		"uri":"https://jsbin.com/",
+		"description":"A simple web based IDE for developing mini web apps for POC and training purposes.  Use this when starting out.  You can also use it to share your code (Do this for cool things you make and the things you break)"
+	}}
+}

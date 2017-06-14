@@ -5,124 +5,39 @@
 		  xmlns:core="sap.ui.core" 
 		  xmlns:l="sap.ui.layout" 
 		  xmlns:f="sap.ui.layout.form"
-		  xmlns:controls="com.katan.control">
+		  >
+
+	<Shell showLogout="true">
 	<App>
 		<pages>
 			<Page title="{i18n>siteTitle}">
 				<content>
-					<IconTabBar id="idTopLevelIconTabBar" selectedKey="aboutme" class="sapUiResponsiveContentPadding">
+					<IconTabBar id="idTopLevelIconTabBar" selectedKey="developmentTab" class="sapUiResponsiveContentPadding">
 						<items>
-							<IconTabFilter id="aboutMeTab" text="{i18n>aboutMeTab}" key="aboutme">
-								<Text text="{/AboutMe}"/>
+							<IconTabFilter id="webDevelopmentTab" text="{i18n>webDevelopmentTab}" key="about" class="sapUiResponsiveMargin" icon="sap-icon://internet-browser">
+								<core:Fragment fragmentName="com.katan.view.Fragments.WebDevelopment" type="XML"/>
 							</IconTabFilter>
-							<IconTabFilter id="skillsTab" text="{i18n>skillsTab}" key="skills">
-								<Carousel>
-									<pages>
-										<Panel id="programmingLanguagePanel" width="auto" class="sapUiResponsiveMargin">
-											<Table id="programmingLanguageTable" items="{/Skills/ProgrammingLanguages}">
-												<headerToolbar>
-													<Toolbar>
-														<Title text="{i18n>programmingLanguagePanel}"/>
-													</Toolbar>
-												</headerToolbar>
-												<columns>
-													<Column>
-														<Text text="{i18n>programmingLanguageColumnLanguage}"/>
-													</Column>
-													<Column>
-														<Text text="{i18n>programmingLanguageColumnRating}"/>
-													</Column>
-												</columns>
-												<items>
-													<ColumnListItem>
-														<cells>
-															<Label text="{Language}" class="sapUISmallMarginTop"/> 
-															<RatingIndicator maxValue="{MaxRating}" value="{Rating}" enabled="false"/>
-														</cells>
-													</ColumnListItem>
-												</items>
-											</Table>
-										</Panel>
-										<Panel id="sapAppsPanel" width="auto" class="sapUiResponsiveMargin">
-											<Table id="sapApplicationsTable" items="{/Skills/SAPApplications}">
-												<headerToolbar>
-													<Toolbar>
-														<Title text="{i18n>sapAppsPanel}"/>
-													</Toolbar>
-												</headerToolbar>
-												<columns>
-													<Column>
-														<Text text="{i18n>sapAppColumnApplication}"/>
-													</Column>
-													<Column>
-														<Text text="{i18n>sapAppColumnRating}"/>
-													</Column>
-												</columns>
-												<items>
-													<ColumnListItem>
-														<cells>
-															<Label text="{Application}" class="sapUISmallMarginTop"/> 
-															<RatingIndicator maxValue="{MaxRating}" value="{Rating}" enabled="false"/>
-														</cells>
-													</ColumnListItem>
-												</items>
-											</Table>
-										</Panel>
-									</pages>
-								</Carousel>
+							<IconTabFilter id="sapDevelopmentTab" text="{i18n>sapDevelopmentTab}" key="about" class="sapUiResponsiveMargin" icon="sap-icon://source-code">
+								<core:Fragment fragmentName="com.katan.view.Fragments.SapDevelopment" type="XML"/>
 							</IconTabFilter>
-							<IconTabFilter id="experienceTab" text="{i18n>experienceTab}" key="experience">
+							
+							<IconTabFilter id="aboutTab" text="{i18n>aboutMeTab}" key="about" class="sapUiResponsiveMargin" icon="sap-icon://my-view" visible="false">
+								<core:Fragment fragmentName="com.katan.view.Fragments.AboutMe" type="XML"/>
 							</IconTabFilter>
-							<IconTabFilter id="qualificationsTab" text="{i18n>qualificationsTab}" key="qualifications">
-								<Carousel>
-									<pages>
-										<Panel id="certificationsPanel" width="auto" class="sapUiResponsiveMargin">
-											<Table id="certificationsTable" items="{/Certifications}">
-												<headerToolbar>
-													<Toolbar>
-														<Title text="{i18n>certificationsPanel}"/>
-													</Toolbar>
-												</headerToolbar>
-												<columns>
-													<Column>
-														<Text text="{i18n>certificationColumnName}"/>
-													</Column>
-													<Column>
-														<Text text="{i18n>certificationColumnAgency}"/>
-													</Column>
-													<Column class="sapUiHideOnPhone">
-														<Text text="{i18n>certificationColumnScore}"/>
-													</Column>
-												</columns>
-												<items>
-													<ColumnListItem>
-														<cells>
-															<DisplayListItem value="{Name}" type="Active" class="sapUISmallMarginTop" press="onPressCertificationLabel"/>
-															<Label text="{CertifyingAgency}" class="sapUISmallMarginTop"/> 
-															<!-- Hide the control and output a label when on a mobile device -->
-															<controls:Chart id="certificationChart" chartType="pie" width="500px" height="250px" 
-																initChart="onInitCertificateChartData" class="sapUiHideOnPhone"/>
-														</cells>
-													</ColumnListItem>
-												</items>
-											</Table>
-										</Panel>
-									</pages>
-								</Carousel>
-							</IconTabFilter>
-							<IconTabFilter id="contactTab" text="{i18n>contactTab}" key="contact">
-								<IconTabBar id="contactTabBar" selectedKey="email">
-									<items>
-										<IconTabFilter id="callTab" icon="sap-icon://call" key="call"/>
-										<IconTabFilter id="emailTab" icon="sap-icon://email" key="email"/>
-										<IconTabFilter id="downloadTab" icon="sap-icon://download" key="download"/>
-									</items>
-								</IconTabBar>
-							</IconTabFilter>
+							<IconTabFilter id="contactTab" text="{i18n>contactTab}" key="contact" icon="sap-icon://contacts" visible="false">
+                				<IconTabBar id="contactTabBar" selectedKey="email" >
+                    				<items>
+                        				<IconTabFilter id="callTab" icon="sap-icon://call" key="call" />
+                        				<IconTabFilter id="emailTab" icon="sap-icon://email" key="email" />
+                        				<IconTabFilter id="downloadTab" icon="sap-icon://download" key="download" />
+                    				</items>
+                				</IconTabBar>
+            				</IconTabFilter>
 						</items>
 					</IconTabBar>
 				</content>
 			</Page>
 		</pages>
 	</App>	  
+    </Shell>
 </mvc:View>

@@ -32,6 +32,13 @@
 			"CertificationURL":"https://open.sap.com/verify/xokid-fyhop-dysal-dinyh-dipat",
 			"Score":269,
 			"MaxScore":300
+		},
+		{
+			"Name":"Application Integration Made Simple with SAP HANA Cloud Integration",
+			"CertifyingAgency":"OpenSAP",
+			"CertificationURL":"https://open.sap.com/verify/xilik-cenek-pesit-niran-lysih",
+			"Score":172,
+			"MaxScore":180
 		}
 	],
 	"Skills":{

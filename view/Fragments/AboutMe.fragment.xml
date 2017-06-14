@@ -1,0 +1,67 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:controls="com.katan.control" xmlns:uxap="sap.uxap">
+    <uxap:ObjectPageLayout id="AboutMeLayout">
+        <uxap:sections>
+            <uxap:ObjectPageSection title="{i18n>aboutMeTab}">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="{i18n>aboutMeTab}">
+                        <uxap:blocks>
+                            <Text text="{/AboutMe}"/>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+
+
+            <uxap:ObjectPageSection title="{i18n>skillsTab}">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="{i18n>programmingLanguagePanel}">
+                        <uxap:blocks>
+                            <Table id="programmingLanguageTable" items="{/Skills/ProgrammingLanguages}">
+                                <columns>
+                                    <Column>
+                                        <Text text="{i18n>programmingLanguageColumnLanguage}" />
+                                    </Column>
+                                    <Column>
+                                        <Text text="{i18n>programmingLanguageColumnRating}" />
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem>
+                                        <cells>
+                                            <Label text="{Language}" class="sapUISmallMarginTop" />
+                                            <RatingIndicator maxValue="{MaxRating}" value="{Rating}" enabled="false" />
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                    <uxap:ObjectPageSubSection title="{i18n>sapAppsPanel}">
+                        <uxap:blocks>
+                            <Table id="sapApplicationsTable" items="{/Skills/SAPApplications}">
+                                <columns>
+                                    <Column>
+                                        <Text text="{i18n>sapAppColumnApplication}" />
+                                    </Column>
+                                    <Column>
+                                        <Text text="{i18n>sapAppColumnRating}" />
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem>
+                                        <cells>
+                                            <Label text="{Application}" class="sapUISmallMarginTop" />
+                                            <RatingIndicator maxValue="{MaxRating}" value="{Rating}" enabled="false" />
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+
+        </uxap:sections>
+    </uxap:ObjectPageLayout>
+</core:FragmentDefinition>
