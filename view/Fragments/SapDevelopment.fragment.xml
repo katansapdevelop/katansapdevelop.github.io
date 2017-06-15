@@ -6,7 +6,7 @@
 		<uxap:sections>
 			<uxap:ObjectPageSection title="SAPUI5">
 				<uxap:subSections>
-					<uxap:ObjectPageSubSection title="Why XML?">
+					<uxap:ObjectPageSubSection title="Why SAPUI5?">
 						<uxap:blocks>
 							<Text text="Coming Soon.."/>
 						</uxap:blocks>

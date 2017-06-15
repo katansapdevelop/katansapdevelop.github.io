@@ -88,7 +88,20 @@
 					</uxap:ObjectPageSubSection>
 					<uxap:ObjectPageSubSection title="Tooling">
 						<uxap:blocks>
-							<Text text="Coming Soon..."/>
+							<List id="jsToolingList" items="{development>/tooling/javascript}">
+								<items>
+									<CustomListItem>
+										<HBox>
+										<!-- <core:Icon src="{development>icon}" class="sapUiSmallMarginEnd"/> -->
+										<VBox>
+											<Link text="{development>title}" href="{development>uri}" target="_blank" />
+											<!-- info="{development>readingStatus}" -->
+											<Text text="{development>description}"/>
+										</VBox>
+									</HBox>
+									</CustomListItem>
+								</items>
+							</List>
 						</uxap:blocks>
 					</uxap:ObjectPageSubSection>
 				</uxap:subSections>
