@@ -132,6 +132,24 @@
 							</List>
 						</uxap:blocks>
 					</uxap:ObjectPageSubSection>
+					<uxap:ObjectPageSubSection title="Tooling">
+						<uxap:blocks>
+							<List id="restToolingList" items="{development>/tooling/rest}">
+								<items>
+									<CustomListItem>
+										<HBox>
+										<!-- <core:Icon src="{development>icon}" class="sapUiSmallMarginEnd"/> -->
+										<VBox>
+											<Link text="{development>title}" href="{development>uri}" target="_blank" />
+											<!-- info="{development>readingStatus}" -->
+											<Text text="{development>description}"/>
+										</VBox>
+									</HBox>
+									</CustomListItem>
+								</items>
+							</List>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
 				</uxap:subSections>
 			</uxap:ObjectPageSection>
 
@@ -144,7 +162,20 @@
 					</uxap:ObjectPageSubSection>
 					<uxap:ObjectPageSubSection title="Learning Resources">
 						<uxap:blocks>
-							<Text text="Coming Soon.."/>
+							<List id="odataLearningList" items="{development>/resources/odata}">
+								<items>
+									<CustomListItem>
+										<HBox>
+										<!-- <core:Icon src="{development>icon}" class="sapUiSmallMarginEnd"/> -->
+										<VBox>
+											<Link text="{development>title}" href="{development>uri}" target="_blank" />
+											<!-- info="{development>readingStatus}" -->
+											<Text text="{development>description}"/>
+										</VBox>
+									</HBox>
+									</CustomListItem>
+								</items>
+							</List>
 						</uxap:blocks>
 					</uxap:ObjectPageSubSection>
 				</uxap:subSections>
@@ -159,7 +190,20 @@
 					</uxap:ObjectPageSubSection>
 					<uxap:ObjectPageSubSection title="Learning Resources">
 						<uxap:blocks>
-							<Text text="Coming Soon.."/>
+							<List id="openui5LearningList" items="{development>/resources/openui5}">
+								<items>
+									<CustomListItem>
+										<HBox>
+										<!-- <core:Icon src="{development>icon}" class="sapUiSmallMarginEnd"/> -->
+										<VBox>
+											<Link text="{development>title}" href="{development>uri}" target="_blank" />
+											<!-- info="{development>readingStatus}" -->
+											<Text text="{development>description}"/>
+										</VBox>
+									</HBox>
+									</CustomListItem>
+								</items>
+							</List>
 						</uxap:blocks>
 					</uxap:ObjectPageSubSection>
 				</uxap:subSections>

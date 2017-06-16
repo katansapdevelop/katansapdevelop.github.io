@@ -4,9 +4,64 @@
 			<uxap:ObjectPageHeader objectTitle="HTTP"/>
 		</uxap:headerTitle> -->
 		<uxap:sections>
+			<uxap:ObjectPageSection title="Software Design">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection title="Software Design">
+						<uxap:blocks>
+							<List id="softwareDesignLearningList" items="{development>/resources/softwareDesign}">
+								<items>
+									<CustomListItem>
+										<HBox>
+										<!-- <core:Icon src="{development>icon}" class="sapUiSmallMarginEnd"/> -->
+										<VBox>
+											<Link text="{development>title}" href="{development>uri}" target="_blank" />
+											<!-- info="{development>readingStatus}" -->
+											<Text text="{development>description}"/>
+										</VBox>
+									</HBox>
+									</CustomListItem>
+								</items>
+							</List>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+
 			<uxap:ObjectPageSection title="SAPUI5">
 				<uxap:subSections>
+					<!--
 					<uxap:ObjectPageSubSection title="Why SAPUI5?">
+						<uxap:blocks>
+							<Text text="Coming Soon.."/>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection> -->
+					<uxap:ObjectPageSubSection title="SAPUI5">
+						<uxap:blocks>
+							<List id="sapui5LearningList" items="{development>/resources/sapui5}">
+								<items>
+									<CustomListItem>
+										<HBox>
+										<!-- <core:Icon src="{development>icon}" class="sapUiSmallMarginEnd"/> -->
+										<VBox>
+											<Link text="{development>title}" href="{development>uri}" target="_blank" />
+											<!-- info="{development>readingStatus}" -->
+											<Text text="{development>description}"/>
+										</VBox>
+									</HBox>
+									</CustomListItem>
+								</items>
+							</List>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+
+			<!--
+			<uxap:ObjectPageSection title="SAP Gateway">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection title="Why SAP Gateway?">
 						<uxap:blocks>
 							<Text text="Coming Soon.."/>
 						</uxap:blocks>
@@ -17,7 +72,7 @@
 						</uxap:blocks>
 					</uxap:ObjectPageSubSection>
 				</uxap:subSections>
-			</uxap:ObjectPageSection>
+			</uxap:ObjectPageSection> -->
 		</uxap:sections>
 	</uxap:ObjectPageLayout>
 </core:FragmentDefinition>

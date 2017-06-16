@@ -118,6 +118,13 @@
 	 				"description":"Another cool feature often used as an alternative to call back functions",
 	 				"readingStatus":"Required",
 	 				"icon":"sap-icon://warning"
+				},
+				{	
+					"uri": "http://shop.oreilly.com/product/9780596805531.do",
+	 				"title": "JavaScript The Definitive Guide 6th Edition",
+	 				"description":"I can personally recommend this book.  I purchased this and it helped me heaps and covers all the topics you require in detail",
+	 				"readingStatus":"Optional",
+	 				"icon":"sap-icon://warning"
 				}],
 		"rest": [{	
 					"uri": "https://en.wikipedia.org/wiki/Representational_state_transfer",
@@ -133,7 +140,85 @@
 	 				"readingStatus":"Required",
 	 				"icon":"sap-icon://warning"
 				}
-			]
+			],
+		"odata": [{	
+					"uri": "http://www.odata.org/",
+	 				"title": "OData.org",
+	 				"description":"This site has information on all the different versions of OData",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				},
+				{	
+					"uri": "http://www.odata.org/documentation/odata-version-2-0/",
+	 				"title": "OData Ver 2.0 Specification",
+	 				"description":"Worth reading about this specific version, as this is the most commonly used currently",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				},
+				{	
+					"uri": "http://services.odata.org/V2/Northwind/Northwind.svc/",
+	 				"title": "Northwind Demo Service for OData 2.0",
+	 				"description":"A demo service that you can use for demo data and practice how version 2.0 of the OData specification works.  I recommend using the Postman chrome extension to simulate sample requests",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				},
+				{	
+					"uri": "http://www.odata.org/documentation/odata-version-4-0/",
+	 				"title": "OData Ver 4.0 Specification",
+	 				"description":"Worth reading about this specific version, as this will eventually replace 2.0",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				},
+				{	
+					"uri": "http://services.odata.org/V4/Northwind/Northwind.svc/",
+	 				"title": "Northwind Demo Service for OData 4.0",
+	 				"description":"A demo service that you can use for demo data and practice how version 4.0 of the OData specification works.  I recommend using the Postman chrome extension to simulate sample requests",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				}
+			],
+		"openui5": [{	
+					"uri": "https://openui5.hana.ondemand.com/",
+	 				"title": "OpenUI5 Home Page",
+	 				"description":"This site has information you require for the OpenUI5 library.  I'd recommend you review the 'Developer Guide', the 'Explored' section and the the 'API Reference'.  As you progress development you will find you are constantly cross referencing these pages",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				}],
+		"sapui5": [{	
+					"uri": "https://sapui5.netweaver.ondemand.com",
+	 				"title": "SAPUI5 Home Page",
+	 				"description":"This site has information you require for the SAPUI5 library.  I'd recommend you review the 'Developer Guide', the 'Explored' section and the the 'API Reference'.  As you progress development you will find you are constantly cross referencing these pages.  It will be similar to OpenUI5 however there will be support for additional controls that are not part of the OpenUI5 library",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				},
+				{	
+					"uri": "https://open.sap.com/courses/ui51",
+	 				"title": "Developing Web Apps with SAPUI5",
+	 				"description":"Self paced online course from SAP for developing web apps in SAPUI5",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				}],
+		"softwareDesign": [{	
+					"uri": "https://open.sap.com/courses/dt1",
+	 				"title": "Developing Software Using Design Thinking",
+	 				"description":"Self paced online course from SAP on Design Thinking",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				},
+				{	
+					"uri": "https://experience.sap.com/fiori-design-web/",
+	 				"title": "Fiori Design Guidelines",
+	 				"description":"Analysts and developers should be familiar with these guidelines.  When building UI5 apps you should always endeavour to follow these guidelines",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				},
+				{	
+					"uri": "https://www.build.me/",
+	 				"title": "Build for Rapid Prototyping of Fiori Applications",
+	 				"description":"Rapid prototyping is used to quickly design a model app that both the customer and developer can visualise.  Also provides channels for feedback and processes to assist throughout the design phase",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				}]
 	},
 	"tooling":{
 		"javascript":[ { 
@@ -144,13 +229,32 @@
 		{
 			"title":"jsfiddle",
 			"uri":"https://jsfiddle.net/",
-			"description":"An alternative to jsbin"
+			"description":"An alternative web based IDE similar to jsbin"
+		},
+		{
+			"title":"Node.js",
+			"uri":"https://nodejs.org/en/",
+			"description":"Node.js can be used to great effect as part of your tooling to develop your Web App when used in conjunction with plugins like Grunt (task automation), Bower (package management) and Yeoman (templating)."
 		},
 		{
 			"title":"Sublime Text 3",
 			"uri":"https://www.sublimetext.com/",
-			"description":"A really light weight text editor with heaps of plug ins to help you develop your web applications"
-		}
-
-	]}
+			"description":"A really light weight text editor with heaps of plug-ins to help you develop your web applications"
+		},
+		{
+			"title":"JSON View Chrome Plugin",
+			"uri":"https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc",
+			"description":"When testing APIs that return JSON this handy plugin will format it and make it much easier to read"
+		},
+		{
+			"title":"JSON Lint",
+			"uri":"https://jsonlint.com/",
+			"description":"When your JSON just is not well formatted this will get you out of trouble.  It is also available as a grunt task via NPM"
+		}],
+	"rest":[ { 
+			"title":"Postman Client",
+			"uri":"https://www.getpostman.com/",
+			"description":"You can use the postman to test your rest based APIs.  It can be installed standalone or as a plugin for chrome"
+		}]
+	}
 }
