@@ -307,7 +307,7 @@
 	"sapui5":[ { 
 			"title":"SAPUI5 Development Tools",
 			"uri":"https://tools.hana.ondemand.com/#sapui5",
-			"description":"Use either Eclipse Neon or the Personel Web IDE. My personnel preference is to use Neon and only to check out and check in my code"
+			"description":"Use either Eclipse Neon or the Personel Web IDE. My personnel preference is to use Neon, but only to check out and check in my code.  I still prefer to code using my choice IDE Sublime.  You may have your own that you prefer and can use that instead"
 		}],
 	"abap":[ { 
 			"title":"ABAP Development Toolkit + SAP Netweaver AS ABAP Developer Edition",
