@@ -125,6 +125,13 @@
 	 				"description":"I can personally recommend this book.  I purchased this and it helped me heaps and covers all the topics you require in detail",
 	 				"readingStatus":"Optional",
 	 				"icon":"sap-icon://warning"
+				},
+				{	
+					"uri": "https://github.com/workshopper/learnyounode/blob/master/README.md",
+	 				"title": "LearnYouNode",
+	 				"description":"Once you start to get to grips with Javascript.  Try your hand at some server side JavaScript.  You can use this npm package to help you get up to speed with development in Node.js.  As you progress, you'll be impressed at how powerful this server is, especially with the content available from NPM",
+	 				"readingStatus":"Optional",
+	 				"icon":"sap-icon://warning"
 				}],
 		"rest": [{	
 					"uri": "https://en.wikipedia.org/wiki/Representational_state_transfer",
@@ -165,7 +172,7 @@
 				{	
 					"uri": "http://www.odata.org/documentation/odata-version-4-0/",
 	 				"title": "OData Ver 4.0 Specification",
-	 				"description":"Worth reading about this specific version, as this will eventually replace 2.0",
+	 				"description":"Worth reading about this specific version, as this has replaced 2.0, although adoptation seems to reamin strong for 2.0",
 	 				"readingStatus":"Required",
 	 				"icon":"sap-icon://warning"
 				},
@@ -183,7 +190,15 @@
 	 				"description":"This site has information you require for the OpenUI5 library.  I'd recommend you review the 'Developer Guide', the 'Explored' section and the the 'API Reference'.  As you progress development you will find you are constantly cross referencing these pages",
 	 				"readingStatus":"Required",
 	 				"icon":"sap-icon://warning"
-				}],
+				},
+				{	
+					"uri": "https://github.com/SAP/openui5-basic-template-app",
+	 				"title": "OpenUI5 Template App",
+	 				"description":"A simple template using Node.js to get you started.  Remember you only need to install grunt-cli once globally (using '-g') and also to change the hostname in the 'Gruntfile.js' to 'localhost' ",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				}
+			],
 		"sapui5": [{	
 					"uri": "https://sapui5.netweaver.ondemand.com",
 	 				"title": "SAPUI5 Home Page",
@@ -195,6 +210,13 @@
 					"uri": "https://open.sap.com/courses/ui51",
 	 				"title": "Developing Web Apps with SAPUI5",
 	 				"description":"Self paced online course from SAP for developing web apps in SAPUI5",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				},
+				{	
+					"uri": "https://www.sap-press.com/sapui5_3980/",
+	 				"title": "SAPUI5 - The Comprehensive Guide",
+	 				"description":"Highly recommend this SAP Press book for anyone getting into UI5 development.  Admittedly it is starting to get a bit old as UI5 versions change, however a must read for anyone starting out",
 	 				"readingStatus":"Required",
 	 				"icon":"sap-icon://warning"
 				}],
@@ -218,6 +240,13 @@
 	 				"description":"Rapid prototyping is used to quickly design a model app that both the customer and developer can visualise.  Also provides channels for feedback and processes to assist throughout the design phase",
 	 				"readingStatus":"Required",
 	 				"icon":"sap-icon://warning"
+				}],
+		"sapGateway": [{	
+					"uri": "https://www.sap-press.com/sap-gateway-and-odata_3904/",
+	 				"title": "SAP Gateway and OData Development",
+	 				"description":"Can highly recommend this book from SAP Press also. Really good for anyone starting out and covers basic development and administration.  However if you want to advance I recommend you brush up on your Object Orientated ABAP skills",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
 				}]
 	},
 	"tooling":{
@@ -235,6 +264,11 @@
 			"title":"Node.js",
 			"uri":"https://nodejs.org/en/",
 			"description":"Node.js can be used to great effect as part of your tooling to develop your Web App when used in conjunction with plugins like Grunt (task automation), Bower (package management) and Yeoman (templating)."
+		},
+		{
+			"title":"Setting up NPM behind a corporate proxy",
+			"uri":"https://stackoverflow.com/questions/25660936/using-npm-behind-corporate-proxy-pac",
+			"description":"In case you get stuck trying to import NPM packages here is some handy info to help you if you need to configure your corporate proxy"
 		},
 		{
 			"title":"Sublime Text 3",

@@ -58,21 +58,35 @@
 			</uxap:ObjectPageSection>
 
 
-			<!--
+			
 			<uxap:ObjectPageSection title="SAP Gateway">
 				<uxap:subSections>
+					<!--
 					<uxap:ObjectPageSubSection title="Why SAP Gateway?">
 						<uxap:blocks>
 							<Text text="Coming Soon.."/>
 						</uxap:blocks>
-					</uxap:ObjectPageSubSection>
-					<uxap:ObjectPageSubSection title="Learning Resources">
+					</uxap:ObjectPageSubSection>  -->
+					<uxap:ObjectPageSubSection title="SAP Gateway">
 						<uxap:blocks>
-							<Text text="Coming Soon.."/>
+							<List id="sapGatewayLearningList" items="{development>/resources/sapGateway}">
+								<items>
+									<CustomListItem>
+										<HBox>
+										<!-- <core:Icon src="{development>icon}" class="sapUiSmallMarginEnd"/> -->
+										<VBox>
+											<Link text="{development>title}" href="{development>uri}" target="_blank" />
+											<!-- info="{development>readingStatus}" -->
+											<Text text="{development>description}"/>
+										</VBox>
+									</HBox>
+									</CustomListItem>
+								</items>
+							</List>
 						</uxap:blocks>
 					</uxap:ObjectPageSubSection>
 				</uxap:subSections>
-			</uxap:ObjectPageSection> -->
+			</uxap:ObjectPageSection> 
 		</uxap:sections>
 	</uxap:ObjectPageLayout>
 </core:FragmentDefinition>
