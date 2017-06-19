@@ -247,6 +247,20 @@
 	 				"description":"Can highly recommend this book from SAP Press also. Really good for anyone starting out and covers basic development and administration.  However if you want to advance I recommend you brush up on your Object Orientated ABAP skills",
 	 				"readingStatus":"Required",
 	 				"icon":"sap-icon://warning"
+				}],
+		"abap": [{	
+					"uri": "https://blogs.sap.com/2013/07/22/abap-news-for-release-740/",
+	 				"title": "ABAP 7.4 News Release",
+	 				"description":"Horst Keller updates on features available in NW 7.4",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
+				},
+				{	
+					"uri": "https://blogs.sap.com/2015/11/27/abap-language-news-for-release-750/",
+	 				"title": "ABAP 7.5 News Release",
+	 				"description":"Horst Keller updates on features available in NW 7.5",
+	 				"readingStatus":"Required",
+	 				"icon":"sap-icon://warning"
 				}]
 	},
 	"tooling":{
@@ -289,6 +303,16 @@
 			"title":"Postman Client",
 			"uri":"https://www.getpostman.com/",
 			"description":"You can use the postman to test your rest based APIs.  It can be installed standalone or as a plugin for chrome"
+		}],
+	"sapui5":[ { 
+			"title":"SAPUI5 Development Tools",
+			"uri":"https://tools.hana.ondemand.com/#sapui5",
+			"description":"Use either Eclipse Neon or the Personel Web IDE. My personnel preference is to use Neon and only to check out and check in my code"
+		}],
+	"abap":[ { 
+			"title":"ABAP Development Toolkit + SAP Netweaver AS ABAP Developer Edition",
+			"uri":"https://tools.hana.ondemand.com/#abap",
+			"description":"Use either Eclipse Neon and install the ABAP Development Tool Kit.  \nAlso find links to to download your own ABAP instance that you can install and work with at home.  I recommend installing on a VM (install over the Ubuntu operating system) as these usually expire after 6-12 months and then a new one becomes available"
 		}]
 	}
 }

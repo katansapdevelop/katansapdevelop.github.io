@@ -1,8 +1,8 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap">
 	<uxap:ObjectPageLayout id="WebDevelopmentPageLayout">
-		<!-- <uxap:headerTitle>
-			<uxap:ObjectPageHeader objectTitle="HTTP"/>
-		</uxap:headerTitle> -->
+		<uxap:headerTitle>
+			<uxap:ObjectPageHeader objectTitle="{i18n>webDevelopmentTitle}" objectSubtitle="{i18n>webDevelopmentSubtitle}"/>
+		</uxap:headerTitle>
 		<uxap:sections>
 			<uxap:ObjectPageSection title="{i18n>httpSection}">
 				<uxap:subSections>

@@ -1,12 +1,12 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap">
 	<uxap:ObjectPageLayout id="SapDevelopmentPageLayout">
-		<!-- <uxap:headerTitle>
-			<uxap:ObjectPageHeader objectTitle="HTTP"/>
-		</uxap:headerTitle> -->
+		 <uxap:headerTitle>
+			<uxap:ObjectPageHeader objectTitle="{i18n>sapDevelopmentTitle}" objectSubtitle="{i18n>sapDevelopmentSubtitle}"/>
+		</uxap:headerTitle>
 		<uxap:sections>
-			<uxap:ObjectPageSection title="Software Design">
+			<uxap:ObjectPageSection title="{i18n>sapDesignSection}">
 				<uxap:subSections>
-					<uxap:ObjectPageSubSection title="Software Design">
+					<uxap:ObjectPageSubSection title="{i18n>sapDesignSubSection}">
 						<uxap:blocks>
 							<List id="softwareDesignLearningList" items="{development>/resources/softwareDesign}">
 								<items>
@@ -27,8 +27,55 @@
 				</uxap:subSections>
 			</uxap:ObjectPageSection>
 
+			<uxap:ObjectPageSection title="{i18n>abapSection}">
+				<uxap:subSections>
+					<!--
+					<uxap:ObjectPageSubSection title="Why SAP Gateway?">
+						<uxap:blocks>
+							<Text text="Coming Soon.."/>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>  -->
+					<uxap:ObjectPageSubSection title="Learning Resources">
+						<uxap:blocks>
+							<List id="abapLearningList" items="{development>/resources/abap}">
+								<items>
+									<CustomListItem>
+										<HBox>
+										<!-- <core:Icon src="{development>icon}" class="sapUiSmallMarginEnd"/> -->
+										<VBox>
+											<Link text="{development>title}" href="{development>uri}" target="_blank" />
+											<!-- info="{development>readingStatus}" -->
+											<Text text="{development>description}"/>
+										</VBox>
+									</HBox>
+									</CustomListItem>
+								</items>
+							</List>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+					<uxap:ObjectPageSubSection title="Tooling">
+						<uxap:blocks>
+							<List id="abapToolingList" items="{development>/tooling/abap}">
+								<items>
+									<CustomListItem>
+										<HBox>
+										<!-- <core:Icon src="{development>icon}" class="sapUiSmallMarginEnd"/> -->
+										<VBox>
+											<Link text="{development>title}" href="{development>uri}" target="_blank" />
+											<!-- info="{development>readingStatus}" -->
+											<Text text="{development>description}"/>
+										</VBox>
+									</HBox>
+									</CustomListItem>
+								</items>
+							</List>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
 
-			<uxap:ObjectPageSection title="SAPUI5">
+
+			<uxap:ObjectPageSection title="{i18n>sapui5Section}">
 				<uxap:subSections>
 					<!--
 					<uxap:ObjectPageSubSection title="Why SAPUI5?">
@@ -36,9 +83,27 @@
 							<Text text="Coming Soon.."/>
 						</uxap:blocks>
 					</uxap:ObjectPageSubSection> -->
-					<uxap:ObjectPageSubSection title="SAPUI5">
+					<uxap:ObjectPageSubSection title="Learning Resources">
 						<uxap:blocks>
 							<List id="sapui5LearningList" items="{development>/resources/sapui5}">
+								<items>
+									<CustomListItem>
+										<HBox>
+										<!-- <core:Icon src="{development>icon}" class="sapUiSmallMarginEnd"/> -->
+										<VBox>
+											<Link text="{development>title}" href="{development>uri}" target="_blank" />
+											<!-- info="{development>readingStatus}" -->
+											<Text text="{development>description}"/>
+										</VBox>
+									</HBox>
+									</CustomListItem>
+								</items>
+							</List>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+					<uxap:ObjectPageSubSection title="Tooling">
+						<uxap:blocks>
+							<List id="sapui5ToolingList" items="{development>/tooling/sapui5}">
 								<items>
 									<CustomListItem>
 										<HBox>
@@ -59,7 +124,7 @@
 
 
 			
-			<uxap:ObjectPageSection title="SAP Gateway">
+			<uxap:ObjectPageSection title="{i18n>gatewaySection}">
 				<uxap:subSections>
 					<!--
 					<uxap:ObjectPageSubSection title="Why SAP Gateway?">
@@ -67,7 +132,7 @@
 							<Text text="Coming Soon.."/>
 						</uxap:blocks>
 					</uxap:ObjectPageSubSection>  -->
-					<uxap:ObjectPageSubSection title="SAP Gateway">
+					<uxap:ObjectPageSubSection title="{i18n>gatewaySection}">
 						<uxap:blocks>
 							<List id="sapGatewayLearningList" items="{development>/resources/sapGateway}">
 								<items>
